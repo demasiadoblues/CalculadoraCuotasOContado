@@ -1,0 +1,43 @@
+<div class="container">
+  <!-- Columna A -->
+  <div class="column">
+    <h2>Escenario A: Pago</h2>
+    <label>Monto:</label>
+    <input type="number" id="montoA" value="100000">
+    
+    <label>Cuotas:</label>
+    <select id="cuotasA">
+      <option value="1">Contado</option>
+      <option value="3">3 cuotas</option>
+      <option value="6">6 cuotas</option>
+      <option value="12">12 cuotas</option>
+      <option value="24">24 cuotas</option>
+    </select>
+    
+    <label>Tasa (%):</label>
+    <input type="number" id="tasaA" value="80">
+    
+    <button onclick="calcular('A')">Calcular</button>
+    <div class="result" id="resultadoA"></div>
+  </div>
+
+  <!-- Columna B -->
+  <div class="column">
+    <h2>Escenario B: Inversión</h2>
+    <label>Monto:</label>
+    <input type="number" id="montoB" value="100000">
+    
+    <label>Tasa (%):</label>
+    <input type="number" id="tasaB" value="85">
+    
+    <button onclick="calcular('B')">Calcular</button>
+    <div class="result" id="resultadoB"></div>
+  </div>
+</div>
+
+<!-- Sección C: Opciones recomendadas -->
+<div class="recommended">
+  <h2>Opciones recomendadas</h2>
+  <div id="mejoresOpciones"></div>
+  <button onclick="exportarExcel()">Descargar en Excel</button>
+</div>
